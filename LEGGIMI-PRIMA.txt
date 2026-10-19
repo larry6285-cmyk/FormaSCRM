@@ -1,0 +1,52 @@
+FORMA — CRM SCUOLA, VERSIONE LOCALE
+==================================
+
+1. Installa Node.js LTS (20 o successivo) da https://nodejs.org.
+2. Estrai TUTTO il contenuto dello ZIP in una cartella della tua macchina.
+3. Apri un terminale in quella cartella ed esegui:
+
+   npm start
+
+   Non serve npm install: il progetto non usa dipendenze esterne.
+   Si apre il browser all'indirizzo http://127.0.0.1:4173.
+   Se non si apre, copia l'indirizzo nel browser.
+
+AVVIO CON DOPPIO CLIC
+- Windows: Avvia Forma.bat
+- macOS: Avvia Forma.command
+  Se il sistema non lo consente, usa il terminale e npm start.
+- Linux: esegui sh avvia-forma.sh da un terminale.
+
+Mantieni aperto il terminale durante l'utilizzo. Ctrl+C ferma il server.
+Non aprire direttamente index.html: i moduli JavaScript richiedono il server.
+Il server ascolta solo sulla tua macchina, non sulla rete locale.
+L'applicazione funziona anche senza Internet dopo l'installazione di Node.js.
+
+DATI E BACKUP
+Il pacchetto contiene codice sorgente e test, nessuna anagrafica reale.
+Il CRM parte vuoto; i dati demo sono facoltativi e fittizi.
+I dati vengono salvati nel browser, NON nella cartella del progetto.
+Usa sempre http://127.0.0.1:4173 con lo stesso browser e profilo.
+Non usare navigazione in incognito per dati da conservare.
+Cambiare porta, host, browser o profilo mostra un archivio diverso.
+
+Per trasferire dati eventualmente inseriti in un'altra copia:
+  A. Nella copia precedente: Impostazioni > Esporta archivio.
+  B. Nella copia locale: Impostazioni > Ripristina archivio.
+Conserva copie JSON in un luogo sicuro. Cancellare i dati del browser può
+cancellare il CRM locale: esporta regolarmente l'archivio.
+
+FUNZIONI E LIMITI
+Allievi, classi/corsi, docenti, calendario, aule, impostazioni.
+Massimo 15 allievi per classe. Aule 01-10 al mattino, 01-04 al pomeriggio.
+Orari iniziali 08:00-13:00 / 14:00-19:00, modificabili nelle Impostazioni.
+Controlli su capienza, sovrapposizioni di aula, classe e docente.
+Questa e' una base funzionante: non include database condiviso, account del
+personale, sincronizzazione tra dispositivi, pagamenti o registro presenze.
+
+PER CONTINUARE LO SVILUPPO
+Apri la cartella con il tuo editor, per esempio Visual Studio Code.
+dist/ contiene HTML, CSS e JavaScript leggibili e modificabili.
+server.mjs contiene il server locale. tests/ contiene i test.
+Comandi: npm start | npm run check | npm test
+Ulteriori dettagli: README.md.

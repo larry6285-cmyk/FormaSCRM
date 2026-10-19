@@ -1,0 +1,11 @@
+{
+  "name": "forma-school-crm",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs --open",
+    "check": "node --check server.mjs && node --check dist/app.js && node --check dist/model.js",
+    "test": "node tests/model.test.js && node tests/server.test.mjs"
+  }
+}
